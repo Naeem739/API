@@ -105,6 +105,14 @@ DISEASE_CLASSES = [
 ]
 
 
+# Initialize model at startup (optional, but helps catch errors early)
+try:
+    load_model()
+    print("✅ Model loaded successfully at startup")
+except Exception as e:
+    print(f"⚠️  Model not loaded at startup (will load on first prediction): {e}")
+
+
 @app.route("/", methods=["GET"])
 def root():
     return jsonify(

@@ -1,0 +1,9 @@
+Flask
+Flask-CORS
+Pillow
+numpy
+tensorflow
+onnxruntime
+gunicorn
+
+
